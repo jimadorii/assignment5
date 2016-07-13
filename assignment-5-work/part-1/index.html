@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+       
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="css/styles.css">
+    
+    <title>
+    Page name
+    </title>
+    
+        <script type="text/javascript">
+        // problem 5    
+        /*
+            document.addEventListener("DOMContentLoaded", clickHere, false);
+            function clickHere() {
+                uniqueId.addEventListener("click", writeMessage, false);
+            }
+            function writeMessage(callback) {
+                callback(alert("I have been clicked"));
+            }
+        */
+        </script>
+        
+    </head>
+    
+    
+    <body>
+       Body content here.
+       <br /><br />
+       
+<!--<input id="uniqueId" type="button" value="Click Me">-->
+
+
+<!--BEGIN problem 1-->
+<!--
+<button onclick="writeMessage()">Click Me</button>    
+    
+    <script type="text/javascript">
+        function writeMessage() {
+            alert("I have been clicked");
+        }
+    </script>
+-->
+<!--END problem 1-->
+  
+  
+<!--BEGIN problem 2-->
+<!--
+<button id="uniqueId">Click Me</button>    
+            
+    <script type="text/javascript">      
+     var myButton = document.getElementById("uniqueId");
+        myButton.onclick = function() {
+            alert("I have been clicked");
+        }
+    </script>
+-->
+<!--END problem 2-->
+  
+  
+<!--BEGIN problem 3-->
+<!--
+<button id="uniqueId">Click Me</button>    
+            
+    <script type="text/javascript">      
+     uniqueId.addEventListener("click", writeMessage, false);
+        function writeMessage() {
+            alert("I have been clicked");
+        }
+    </script>
+-->
+<!--END problem 3-->
+  
+  
+<!--BEGIN problem 4-->
+<!--
+<button id="uniqueId">Click Me</button>    
+            
+    <script type="text/javascript">      
+     uniqueId.addEventListener("click", writeMessage, false);
+        function writeMessage(callback) {
+            callback(alert("I have been clicked"));
+        }
+    </script>
+-->
+<!--END problem 4-->
+  
+  
+<!--BEGIN problem 5-->
+<!--
+    Written in <HEAD> section.
+-->
+<!--
+<button id="uniqueId">Click Me</button> 
+-->
+<!--END problem 5-->
+  
+
+<!--BEGIN problem 6-->
+<!--
+<a href="http://www.google.com" id="redirect">Visit Google</a>
+
+        <script type="text/javascript">
+        document.getElementById("redirect").addEventListener("click", function(event){
+            event.preventDefault();
+                alert("The link you have click on has been disabled");
+        });
+        </script>
+-->
+<!--END problem 6-->
+  
+  
+<!--BEGIN problem 7-->
+<!--
+<input type="text" name="texthere" placeholder="Type something" id="inputtext"><br /><br />
+
+<button id="button1">Click here</button>
+        <p id="alerttext"></p>
+
+        <script type="text/javascript">
+            button1.addEventListener("click", writeMessage, false);
+            function writeMessage() {
+                document.getElementById("alerttext").innerHTML = 'The "click here" button has been disabled';
+                    alert(inputtext.value);
+                
+            }
+        </script>
+-->
+<!--END problem 7-->
+   
+    
+<!--BEGIN problem 8-->
+<!-- INCOMPLETE
+<button id="button1">Click here</button>
+
+
+        <script type="text/javascript">
+            
+            button1.addEventListener("click", displayHere, false);
+            function displayHere() { 
+             window.open('newpage.html','gg','width=300,height=300,resizable=yes');        
+            }  
+        </script>
+-->
+<!--END problem 8-->
+   
+   
+<!--BEGIN problem 9-->
+<!--
+<button id="button1">Start</button>
+    
+<button id="button2">Stop</button>
+    
+        <script type="text/javascript">
+            
+            button1.addEventListener("click", startHere, false);
+        
+                var startHere = setInterval(function(){ console.log("Hello"); }, 3000); 
+                
+            button2.addEventListener("click", stopHere, false);
+                function stopHere() {
+                    clearInterval(startHere);
+                    console.log('"Hello" counter stopped');
+                }
+        </script>
+-->
+<!--END problem 9-->
+ 
+      
+<!--BEGIN problem 9-->
+
+<div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+  </div>
+</div>
+
+<button id="button1">Click Me</button> 
+
+        <script type="text/javascript">        
+           document.getElementById("dropdown-content").addEventListener("click", function(button1){
+            event.button1();
+                alert("The link you have click on has been disabled");
+        });
+        </script>
+
+<!--END problem 9-->   
+       
+       
+       
+       
+<!-- BEGIN JS script link below-->       
+<!--<script type="text/javascript" src="js/script.js"></script>-->
+   
+    </body>
+    
+</html>
